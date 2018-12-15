@@ -35,7 +35,7 @@ def divide_train_test(validation, length):
     return validation
 
 
-def get_train_test_data(validation, data, y):
+def get_train_test_data(validation, data):
     
     
     data_train = []
@@ -43,16 +43,10 @@ def get_train_test_data(validation, data, y):
     for var in data:
         data_train.append(tools_arrays.items_by_index(var, validation['train']))        
         data_test.append(tools_arrays.items_by_index(var, validation['test']))
-
-    y_train = tools_arrays.items_by_index(y, validation['train'])       
-    y_test  = tools_arrays.items_by_index(y, validation['test'])
-
         
     data_split = {
               'data_train': data_train
             , 'data_test' : data_test
-            , 'y_train'   : y_train
-            , 'y_test'    : y_test
             }
         
     return data_split
