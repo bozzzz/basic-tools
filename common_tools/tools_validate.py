@@ -8,6 +8,8 @@ Created on Sun Dec  2 16:59:09 2018
 
 import random 
 import importlib
+import numpy as np
+
     
 #in house github:
 
