@@ -40,6 +40,13 @@ def indices_of_value_list(list_in, value_in):
     return [i for i, value in enumerate(list_in) if value==value_in]
 
 
+def indices_of_value_list2dim(list_in, value_in):
+    
+    # get index of each item in list_in, wheere the item contains value_in 
+    # => item = ['class1', class3'] -> value=class1 => item contains value!
+    return [i for i, value in enumerate(list_in) if value_in in value]
+
+
 def list_into_dict(data, labs):
     
     
